@@ -22,6 +22,8 @@
       {
         "avoidEscape": true
       }
-    ]
+    ],
+    "linebreak-style": ["error", "windows"],
+    "semi": [2, "never"]
   }
 }
