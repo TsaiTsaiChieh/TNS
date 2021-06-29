@@ -1,7 +1,24 @@
-version: '3'
-services: 
+version: "3"
+services:
   web:
     build: .
-    ports: 
+    ports:
       - "3000:3000"
     command: npm run dev
+    networks:
+      - backend
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 0000
+      MYSQL_ROOT_PASSWORD: 0000
+      MYSQL_DATABASE: app
+      TZ: Asia/Taipei
+    ports:
+      - 3306:3306
+    networks:
+      - backend
+networks:
+  backend:
