@@ -8,6 +8,6 @@ var app = express_1.default();
 app.get('/', function (req, res) {
     res.send('Hello');
 });
-app.listen(5000, function () {
+app.listen(3000, function () {
     console.log('Server running');
 });
